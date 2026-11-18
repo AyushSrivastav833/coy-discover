@@ -4,7 +4,7 @@ Ayush Srivastav
 B.Tech from 
 National Institute of Technology, Jamshedpur
 
-- Email: ayushsrivastav6391.com
+- Email: ayushsrivastav6391@gmail.com
 - GitHub:[AyushSrivastav833](https://github.com/AyushSrivastav833)
 - LinkedIn: https://www.linkedin.com/in/ayush-srivastav-b654b0286/
 
