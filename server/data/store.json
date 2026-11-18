@@ -1,0 +1,201 @@
+{
+  "swipes": [
+    {
+      "userId": "demo-user",
+      "profileId": "profile-1",
+      "action": "like",
+      "createdAt": "2026-11-18T05:40:31.470Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-2",
+      "action": "like",
+      "createdAt": "2026-11-18T05:40:32.541Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-3",
+      "action": "pass",
+      "createdAt": "2026-11-18T06:34:30.559Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-4",
+      "action": "like",
+      "createdAt": "2026-11-18T06:34:38.177Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-5",
+      "action": "like",
+      "createdAt": "2026-11-18T06:34:39.120Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-6",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:19.425Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-7",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:20.698Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-8",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:21.862Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-9",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:22.927Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-10",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:23.894Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-11",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:24.948Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-12",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:26.076Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-13",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:28.928Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-14",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:29.909Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-15",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:30.631Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-16",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:31.476Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-17",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:32.409Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-18",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:33.342Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-19",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:34.625Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-20",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:35.543Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-21",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:37.287Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-22",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:37.895Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-23",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:47:39.037Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-24",
+      "action": "like",
+      "createdAt": "2026-11-18T09:47:48.249Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-25",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:03.196Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-26",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:03.830Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-27",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:05.312Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-28",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:06.351Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-29",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:07.334Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-30",
+      "action": "pass",
+      "createdAt": "2026-11-18T09:53:08.154Z"
+    }
+  ],
+  "matches": [
+    {
+      "userId": "demo-user",
+      "profileId": "profile-2",
+      "createdAt": "2026-11-18T05:40:32.541Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-5",
+      "createdAt": "2026-11-18T06:34:39.121Z"
+    },
+    {
+      "userId": "demo-user",
+      "profileId": "profile-24",
+      "createdAt": "2026-11-18T09:47:48.249Z"
+    }
+  ]
+}
