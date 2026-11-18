@@ -9,52 +9,36 @@ National Institute of Technology, Jamshedpur
 - LinkedIn: https://www.linkedin.com/in/ayush-srivastav-b654b0286/
 
 
+# Coy Discover – Swipe & Match Application
 
-# Coy Discover — Swipe-Based Dating Discovery App
-
-A standalone swipe-based discovery application inspired by modern dating platforms. Users can discover profiles, like or pass on people, and connect through mutual likes.
+A mobile-first profile discovery application inspired by Coy, built using React and Node.js. Users can discover profiles, like or pass on them, and view mutual matches.
 
 ## Features
 
-### 1. Profile Discovery
-- 30 seeded mock user profiles.
-- Each profile includes name, age, photo, bio, city, college, and interests.
-- One profile displayed at a time.
-- Previously swiped profiles are excluded from the feed.
-
-### 2. Swipe Experience
-- Swipe right to like a profile.
-- Swipe left to pass on a profile.
-- Drag gestures supported through the frontend.
-- Like and pass buttons for desktop users.
-- Animated profile transitions and feedback.
-- Empty state when no profiles remain.
-
-### 3. Mutual Matching
-- A match is created only when both users have liked each other.
-- Displays an "It's a match!" interaction.
-- Dedicated Matches section.
-- Only mutual matches are displayed.
-- Incoming non-mutual likes are never exposed through the feed or matches API.
-
-### 4. Persistent Storage
-- Swipes and matches are stored in a JSON file.
-- Data remains available after page refreshes and backend restarts.
-- Duplicate swipes are rejected.
+- **Discover Profiles:** Browse 30 seeded mock profiles.
+- **Swipe Interaction:** Like or pass profiles using swipe gestures or action buttons.
+- **Mutual Matching:** A match is created only when both users have liked each other.
+- **Matches Dashboard:** View mutual matches in one place.
+- **Persistent Data:** Swipe history and matches are saved in a JSON file and retained across server restarts.
+- **No Repeated Profiles:** Previously swiped profiles do not appear again.
+- **Responsive UI:** Mobile-first interface with desktop support.
+- **Empty State:** Displays a message when all profiles have been viewed.
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Frontend | React.js, Vite |
-| Styling | CSS |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Routing | React Router DOM |
-| HTTP Client | Axios |
-| Backend | Node.js, Express.js |
-| Middleware | CORS |
-| Storage | JSON file |
+### Frontend
+- React.js
+- Vite
+- Axios
+- Framer Motion
+- Lucide React
+- CSS
+
+### Backend
+- Node.js
+- Express.js
+- CORS
+- JSON file-based persistence
 
 ## Project Structure
 
@@ -64,8 +48,10 @@ coy-discover/
 ├── client/
 │   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── App.jsx
 │   │   ├── App.css
+│   │   ├── index.css
 │   │   └── main.jsx
 │   └── package.json
 │
@@ -75,29 +61,29 @@ coy-discover/
 │   ├── index.js
 │   └── package.json
 │
+├── .gitignore
 └── README.md
 ```
 
-## Application Architecture
+## Architecture
 
 The application follows a simple client-server architecture.
 
-1. React frontend requests profile data from the Express backend.
-2. Express retrieves available profiles from the seeded mock data.
-3. Users like or pass on profiles.
-4. The frontend sends swipe actions to the backend.
-5. The backend checks whether the action creates a mutual match.
-6. Swipes and matches are saved in the JSON storage file.
-7. The Matches page retrieves confirmed mutual matches.
+1. The React frontend requests profiles from the Express backend.
+2. The backend filters out profiles that the demo user has already swiped on.
+3. When the user likes or passes a profile, the frontend sends a POST request.
+4. The backend records the swipe in `server/data/store.json`.
+5. A mutual match is created only if the user likes a profile that has already liked the demo user.
+6. The Matches page retrieves and displays only mutual matches.
 
-## API Endpoints
+## API Documentation
 
 | Method | Endpoint | Description |
 |---|---|---|
 | GET | `/` | Backend health check |
-| GET | `/feed` | Returns profiles not yet swiped on |
-| POST | `/swipe` | Records a like or pass |
-| GET | `/matches` | Returns mutual matches |
+| GET | `/feed` | Get profiles not yet swiped on |
+| POST | `/swipe` | Record a like or pass |
+| GET | `/matches` | Retrieve mutual matches |
 
 ### POST /swipe
 
@@ -105,7 +91,7 @@ Example request:
 
 ```json
 {
-  "profileId": "profile-1",
+  "profileId": "profile-2",
   "action": "like"
 }
 ```
@@ -114,11 +100,12 @@ Possible actions:
 - `like`
 - `pass`
 
-The API responds with the swipe result and whether a match was created.
+The response includes whether a mutual match was created.
 
-## Installation and Setup
+## Installation & Setup
 
 ### Prerequisites
+
 - Node.js
 - npm
 - Git
@@ -126,7 +113,7 @@ The API responds with the swipe result and whether a match was created.
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/AyushSrivastav833/coy-discover.git
 cd coy-discover
 ```
 
@@ -138,7 +125,7 @@ npm install
 npm run dev
 ```
 
-Backend runs at:
+The backend runs at:
 
 `http://localhost:5000`
 
@@ -152,34 +139,29 @@ npm install
 npm run dev
 ```
 
-Frontend runs at:
+Open the local Vite URL shown in your terminal, usually:
 
 `http://localhost:5173`
 
-## Testing
+## Data Persistence
 
-The following behaviors have been manually checked:
+Swipe records and mutual matches are stored in:
 
-- Duplicate swipe rejection.
-- Previously swiped profiles excluded from the feed.
-- Mutual matches displayed in the Matches section.
-- Match data persists after backend restart.
+`server/data/store.json`
 
-## Design Decisions
+This allows the application to retain user actions across page refreshes and backend restarts.
 
-- **JSON storage:** Chosen for simplicity because this assignment uses a single demo user and a small dataset.
-- **Mutual matching:** Prevents revealing incoming likes unless both users have liked each other.
-- **Persistent swipes:** Prevents profiles from reappearing after refreshing the application.
-- **Single-user model:** External authentication is unnecessary for this assignment.
+The project uses a single demo user and mock profile data. It does not implement external authentication.
 
 ## Future Improvements
 
-- Replace JSON storage with MongoDB or PostgreSQL.
-- Add automated backend tests.
-- Add profile filters based on interests and location.
-- Improve accessibility and swipe feedback.
-- Deploy the frontend and backend.
+- User authentication and individual user accounts.
+- Database integration with MongoDB.
+- Profile filters based on interests and location.
+- Improved profile recommendations.
+- Real-time match notifications.
+- Profile management and editing.
 
-## Disclaimer
 
-This is an independent assignment project built with mock profile data. It is not affiliated with or connected to Coy's production codebase.
+
+Built as part of the Coy SDE Intern Assignment.
