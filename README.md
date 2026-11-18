@@ -9,9 +9,19 @@ National Institute of Technology, Jamshedpur
 - LinkedIn: https://www.linkedin.com/in/ayush-srivastav-b654b0286/
 
 
+
 # Coy Discover – Swipe & Match Application
 
 A mobile-first profile discovery application inspired by Coy, built using React and Node.js. Users can discover profiles, like or pass on them, and view mutual matches.
+
+## Live Demo
+
+- Frontend: https://coy-discover-beta.vercel.app
+- Backend API: https://coy-discover-api-ynml.onrender.com
+
+## GitHub Repository
+
+https://github.com/AyushSrivastav833/coy-discover
 
 ## Features
 
